@@ -1,21 +1,25 @@
 import { useNavigate } from "react-router-dom";
 import BackButton from "../components/BackButton";
+import "../index.css";
 
 function Home() {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className="home">
+      <BackButton />
 
-      <h1>Select a MacBook</h1>
+      <h1>Veldu MacBook</h1>
 
-      <button onClick={() => navigate("/macbook-air")}>
-        MacBook Air
-      </button>
+      <div className="home-buttons">
+        <button onClick={() => navigate("/macbook-air")}>
+          MacBook Air
+        </button>
 
-      <button onClick={() => navigate("/macbook-pro")}>
-        MacBook Pro
-      </button>
+        <button onClick={() => navigate("/macbook-pro")}>
+          MacBook Pro
+        </button>
+      </div>
     </div>
   );
 }

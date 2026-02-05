@@ -21,14 +21,17 @@ function Product({ product }) {
   return (
     <div>
       <BackButton />
+      <div className="home">
 
-      <h1>{title}</h1>
-
-      {routes.map((r) => (
-        <button key={r.path} onClick={() => navigate(r.path)}>
-          {title} {r.label}
-        </button>
-      ))}
+        <h1>{title}</h1>
+        <div className="home-buttons">
+          {routes.map((r) => (
+            <button key={r.path} onClick={() => navigate(r.path)}>
+              {title} {r.label}
+            </button>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

@@ -9,7 +9,7 @@ import mbp16 from "/assets/group1.png";
 
 function Pro16() {
   return (
-    <div>
+    <div className="home">
       <BackButton />
 
       <div className="page-header hero-header">
@@ -18,7 +18,7 @@ function Pro16() {
 
       <ProductLayout
         image={mbp16}
-        leftBottom={<Specs />}
+        leftBottom={<Specs model="macbook-pro-16" />}
         right={<ChipComparison />}
       />
     </div>
