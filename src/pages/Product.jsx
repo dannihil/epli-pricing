@@ -23,6 +23,7 @@ function Product({ product }) {
       <BackButton />
       <div className="home">
 
+
         <h1>{title}</h1>
         <div className="home-buttons">
           {routes.map((r) => (
@@ -30,6 +31,10 @@ function Product({ product }) {
               {title} {r.label}
             </button>
           ))}
+        </div>
+        <div className="footer-ele">
+          <img src="../assets/epli_logo.png" alt="Epli logo" className="logo" />
+          <p>Laugavegur 182 | Smáralind | epli.is</p>
         </div>
       </div>
     </div>

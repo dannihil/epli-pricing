@@ -91,6 +91,19 @@ li::marker {
    Buttons (general UI)
 ========================= */
 
+.logo {
+  height: 18vh;
+  margin-top: 50px;
+}
+
+.footer-ele {
+  display: flex;
+  flex-direction: column;   /* stack logo + text */
+  align-items: center;      /* horizontal center */
+  justify-content: center;  /* vertical center if height exists */
+  text-align: center;
+}
+
 button {
   background: rgba(0,0,0,0.04);
   color: #1d1d1f;
@@ -376,7 +389,7 @@ li {
 
 .home-buttons button {
   min-width: 260px;
-  min-height: 48px;          /* Apple touch target */
+  min-height: 100px;          /* Apple touch target */
 
   background: #ffffff;
   color: #1d1d1f;
@@ -386,7 +399,7 @@ li {
 
   padding: 16px 24px;        /* larger hit area */
 
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 600;
 
   box-shadow:

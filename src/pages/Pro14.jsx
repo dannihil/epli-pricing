@@ -1,3 +1,4 @@
+import useInactivityRedirect from "../hooks/useInactivityRedirect";
 import BackButton from "../components/BackButton";
 import ProductLayout from "../components/ProductLayout";
 import ColorSelector from "../components/ColorSelector";
@@ -8,6 +9,8 @@ import "../index.css";
 import mbp16 from "/assets/group1.png";
 
 function Pro14() {
+  useInactivityRedirect(); // 👈 one line
+
   return (
     <div className="home">
       <BackButton />

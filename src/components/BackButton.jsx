@@ -1,7 +1,13 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function BackButton() {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // Hide on home screen
+  if (location.pathname === "/") {
+    return null;
+  }
 
   return (
     <button
@@ -19,6 +25,5 @@ function BackButton() {
     </button>
   );
 }
-
 
 export default BackButton;

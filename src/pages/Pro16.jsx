@@ -1,6 +1,6 @@
+import useInactivityRedirect from "../hooks/useInactivityRedirect";
 import BackButton from "../components/BackButton";
 import ProductLayout from "../components/ProductLayout";
-import ColorSelector from "../components/ColorSelector";
 import ChipComparison from "../components/ChipComparison";
 import Specs from "../components/Specs";
 import "../index.css";
@@ -8,6 +8,8 @@ import "../index.css";
 import mbp16 from "/assets/group1.png";
 
 function Pro16() {
+  useInactivityRedirect(); // 👈 one line
+
   return (
     <div className="home">
       <BackButton />
