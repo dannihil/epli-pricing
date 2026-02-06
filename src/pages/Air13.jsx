@@ -1,31 +1,57 @@
+import { useState } from "react";
 import useInactivityRedirect from "../hooks/useInactivityRedirect";
 import BackButton from "../components/BackButton";
 import ProductLayout from "../components/ProductLayout";
-import ColorSelector from "../components/ColorSelector";
 import ChipComparison13 from "../components/ChipComparison13";
+import ChipComparison15 from "../components/ChipComparison15";
 import Specs from "../components/Specs";
+import BottomBanner from "../components/BottomBanner";
 import "../index.css";
 
-import mbp16 from "/assets/group1.png";
 
-function Air13() {
-  useInactivityRedirect(); // 👈 one line
+function Air() {
+  useInactivityRedirect();
+
+  const [size, setSize] = useState("13");
+
+  const is13 = size === "13";
 
   return (
     <div className="home">
       <BackButton />
 
       <div className="page-header hero-header">
-        <h1>MacBook Air 13"</h1>
+        <h1>MacBook Air</h1>
+
+        {/* Segmented control */}
+        <div className="segmented-control">
+          <button
+            className={is13 ? "active" : ""}
+            onClick={() => setSize("13")}
+          >
+            13"
+          </button>
+          <button
+            className={!is13 ? "active" : ""}
+            onClick={() => setSize("15")}
+          >
+            15"
+          </button>
+        </div>
       </div>
 
       <ProductLayout
-        image={mbp16}
-        leftBottom={<Specs model="macbook-air-13" />}
-        right={<ChipComparison13 />}
+        leftBottom={
+          <Specs
+            model={is13 ? "macbook-air-13" : "macbook-air-15"}
+          />
+        }
+        right={is13 ? <ChipComparison13 /> : <ChipComparison15 />}
       />
+
+      <BottomBanner text="uppítaka" />
     </div>
   );
 }
 
-export default Air13;
+export default Air;

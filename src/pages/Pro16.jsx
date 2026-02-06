@@ -3,6 +3,7 @@ import BackButton from "../components/BackButton";
 import ProductLayout from "../components/ProductLayout";
 import ChipComparison from "../components/ChipComparison";
 import Specs from "../components/Specs";
+import BottomBanner from "../components/BottomBanner";
 import "../index.css";
 
 import mbp16 from "/assets/group1.png";
@@ -23,6 +24,9 @@ function Pro16() {
         leftBottom={<Specs model="macbook-pro-16" />}
         right={<ChipComparison />}
       />
+
+            {/* Full-width bottom element */}
+      <BottomBanner />
     </div>
   );
 }

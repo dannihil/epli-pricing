@@ -12,8 +12,11 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
 
-      <Route path="/macbook-air" element={<Product product="air" />} />
-      <Route path="/macbook-pro" element={<Product product="pro" />} />
+      {/*<Route path="/macbook-air" element={<Product product="air" />} />*/}
+      {/*<Route path="/macbook-pro" element={<Product product="pro" />} />*/}
+
+      <Route path="/macbook-air" element={<Air13/>}/>
+      <Route path="/macbook-pro" element={<Pro14/>}/>
 
       <Route path="/macbook-air/13" element={<Air13 />} />
       <Route path="/macbook-air/15" element={<Air15 />} />

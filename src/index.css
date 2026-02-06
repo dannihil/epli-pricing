@@ -44,6 +44,65 @@ body::after {
   pointer-events: none;
 }
 
+.segmented-control {
+  margin-top: 16px;
+
+  display: inline-flex;
+  padding: 4px;
+
+  background: rgba(0,0,0,0.06);
+  border-radius: 999px;
+  gap: 4px;
+}
+
+.segmented-control button {
+  border: none;
+  background: transparent;
+
+  padding: 10px 20px;
+  border-radius: 999px;
+
+  font-size: 1.3rem;
+  font-weight: 600;
+
+  color: #1d1d1f;
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.segmented-control button.active {
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+
+
+.bottom-banner {
+  max-width: 1200px;
+  max-height: 80px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  margin-top: -40px;
+
+  background: #009900; /* Apple system green */
+  color: #ffffff;
+
+  border-radius: 16px;
+
+  padding: 20px 24px;
+
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
 
 /* =========================
    Typography
@@ -78,13 +137,11 @@ li::marker {
 .page-header {
   max-width: 1200px;
   margin: 0 auto;
-  padding-bottom: 30px;
   text-align: center;
+  margin-bottom: -40px;
 }
 
-.page-header h1 {
-  margin-bottom: -60px;
-}
+
 
 
 /* =========================
@@ -248,8 +305,9 @@ button:focus {
 .variant-headers {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  gap: 30px;
   margin-bottom: 16px;
+  margin-left: 16px;
   font-weight: 600;
 }
 
@@ -272,12 +330,29 @@ button:focus {
   color: #1d1d1f;
   border-radius: 16px;
   padding: 16px 18px;
+  position: relative;
 
   box-shadow:
     0 1px 1px rgba(0,0,0,0.05),
     0 6px 18px rgba(0,0,0,0.1);
 
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.storage-option::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: calc(50% + 1px); /* half + half of gap */
+
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0),
+    rgba(0,0,0,0.08),
+    rgba(0,0,0,0)
+  );
 }
 
 .storage-option:hover {

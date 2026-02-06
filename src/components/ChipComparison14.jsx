@@ -5,7 +5,7 @@ function ChipComparison14() {
   return (
     <div className="chip-grid">
       <ChipOption
-  title="Apple M5 örgjörvi"
+  title="M5 chip"
   variants={[
     {
       id: "m5-10-10",
@@ -22,7 +22,7 @@ function ChipComparison14() {
 />
 
       <ChipOption
-  title="Apple M4 Pro örgjörvi"
+  title="M4 Pro chip"
   variants={[
     {
       id: "m4-pro-12-16",
@@ -46,7 +46,7 @@ function ChipComparison14() {
   battery="Allt að 24 tíma rafhlaða"
 />
       <ChipOption
-  title="Apple M4 Max örgjörvi"
+  title="M4 Max chip"
   variants={[
     {
       id: "m4-max-14-32",

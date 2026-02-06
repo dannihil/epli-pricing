@@ -5,7 +5,7 @@ function ChipComparison13() {
   return (
     <div className="chip-grid">
       <ChipOption
-  title="Apple M4 örgjörvi"
+  title="M4 chip"
   variants={[
     {
       id: "m4-10-8",

@@ -10,7 +10,7 @@ function Home() {
       <BackButton />
 
 
-      <h1>Veldu MacBook</h1>
+      <h1 style={{fontSize: "6vw", fontWeight: 800}}>Verðlisti</h1>
 
       <div className="home-buttons">
         <button onClick={() => navigate("/macbook-air")}>
