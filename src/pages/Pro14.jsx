@@ -22,27 +22,28 @@ function Pro() {
         <h1>MacBook Pro</h1>
 
         {/* Segmented control */}
-        <div className="segmented-control">
-          <button
-            className={is14 ? "active" : ""}
-            onClick={() => setSize("14")}
-          >
-            14"
-          </button>
-          <button
-            className={!is14 ? "active" : ""}
-            onClick={() => setSize("16")}
-          >
-            16"
-          </button>
+        <div className="segment-container">
+          <h3 style={{ marginTop: "33px" }}>Skjástærð: </h3>
+          <div className="segmented-control">
+            <button
+              className={is14 ? "active" : ""}
+              onClick={() => setSize("14")}
+            >
+              14"
+            </button>
+            <button
+              className={!is14 ? "active" : ""}
+              onClick={() => setSize("16")}
+            >
+              16"
+            </button>
+          </div>
         </div>
       </div>
 
       <ProductLayout
         leftBottom={
-          <Specs
-            model={is14 ? "macbook-pro-14" : "macbook-pro-16"}
-          />
+          <Specs model={is14 ? "macbook-pro-14" : "macbook-pro-16"} />
         }
         right={is14 ? <ChipComparison14 /> : <ChipComparison16 />}
       />

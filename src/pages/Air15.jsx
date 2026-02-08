@@ -26,7 +26,7 @@ function Air15() {
         right={<ChipComparison15 />}
       />
 
-            {/* Full-width bottom element */}
+      {/* Full-width bottom element */}
       <BottomBanner />
     </div>
   );

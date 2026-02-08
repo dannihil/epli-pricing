@@ -11,11 +11,7 @@ export const SPECS = {
     },
     {
       title: "Tengimöguleikar",
-      items: [
-        "Thunderbolt 5 / USB 4",
-        "SD kortalesari",
-        "HDMI (4K 240Hz)",
-      ],
+      items: ["Thunderbolt 5 / USB 4", "SD kortalesari", "HDMI (4K 240Hz)"],
     },
   ],
   "macbook-pro-16": [
@@ -30,47 +26,27 @@ export const SPECS = {
     },
     {
       title: "Tengimöguleikar",
-      items: [
-        "Thunderbolt 5 / USB 4",
-        "SD kortalesari",
-        "HDMI (4K 240Hz)",
-      ],
+      items: ["Thunderbolt 5 / USB 4", "SD kortalesari", "HDMI (4K 240Hz)"],
     },
   ],
   "macbook-air-13": [
     {
       title: "Liquid Retina skjár",
-      items: [
-        "2560×1664 upplausn",
-        "500 nits",
-        "True Tone",
-      ],
+      items: ["2560×1664 upplausn", "500 nits", "True Tone"],
     },
     {
       title: "Tengimöguleikar",
-      items: [
-        "MagSafe 3",
-        "2x Thunderbolt / USB-C",
-        "3.5 mm heyrnatól",
-      ],
+      items: ["MagSafe 3", "2x Thunderbolt / USB-C", "3.5 mm heyrnatól"],
     },
   ],
   "macbook-air-15": [
     {
       title: "Liquid Retina skjár",
-      items: [
-        "2880×1864 upplausn",
-        "500 nits",
-        "True Tone",
-      ],
+      items: ["2880×1864 upplausn", "500 nits", "True Tone"],
     },
     {
       title: "Tengimöguleikar",
-      items: [
-        "MagSafe 3",
-        "2x Thunderbolt / USB-C",
-        "3.5 mm heyrnatól",
-      ],
+      items: ["MagSafe 3", "2x Thunderbolt / USB-C", "3.5 mm heyrnatól"],
     },
   ],
 };

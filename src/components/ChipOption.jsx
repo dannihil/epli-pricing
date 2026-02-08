@@ -28,15 +28,12 @@ function ChipOption({ title, variants = [], battery }) {
                   <div>{opt.storage} SSD</div>
                   <div>{opt.ram} memory</div>
                 </div>
-                <div className="storage-price">
-                  {opt.price}
-                </div>
+                <div className="storage-price">{opt.price}</div>
               </div>
-            ))
+            )),
           )}
         </div>
       </div>
-
     </div>
   );
 }

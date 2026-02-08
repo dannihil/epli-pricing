@@ -10,12 +10,7 @@ function ModelSelect() {
 
   return (
     <div className="model-select">
-
-      <img src="../assets/epli_logo.png" alt="Epli logo" className="logo" />
-
-      <h1>
-        {product === "macbook-air" ? "MacBook Air" : "MacBook Pro"}
-      </h1>
+      <h1>{product === "macbook-air" ? "MacBook Air" : "MacBook Pro"}</h1>
 
       <div className="model-options">
         {options[product].map((item) => (

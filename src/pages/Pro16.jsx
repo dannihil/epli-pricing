@@ -25,7 +25,7 @@ function Pro16() {
         right={<ChipComparison />}
       />
 
-            {/* Full-width bottom element */}
+      {/* Full-width bottom element */}
       <BottomBanner />
     </div>
   );

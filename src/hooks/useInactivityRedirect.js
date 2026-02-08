@@ -27,17 +27,13 @@ export default function useInactivityRedirect() {
       "scroll",
     ];
 
-    events.forEach((event) =>
-      window.addEventListener(event, resetTimer)
-    );
+    events.forEach((event) => window.addEventListener(event, resetTimer));
 
     resetTimer();
 
     return () => {
       clearTimeout(timerRef.current);
-      events.forEach((event) =>
-        window.removeEventListener(event, resetTimer)
-      );
+      events.forEach((event) => window.removeEventListener(event, resetTimer));
     };
   }, [navigate]);
 }

@@ -4,8 +4,7 @@ import BackButton from "../components/BackButton";
 function Product({ product }) {
   const navigate = useNavigate();
 
-  const title =
-    product === "air" ? "MacBook Air" : "MacBook Pro";
+  const title = product === "air" ? "MacBook Air" : "MacBook Pro";
 
   const routes =
     product === "air"
@@ -22,8 +21,6 @@ function Product({ product }) {
     <div>
       <BackButton />
       <div className="home">
-
-
         <h1>{title}</h1>
         <div className="home-buttons">
           {routes.map((r) => (

@@ -8,7 +8,6 @@ import Specs from "../components/Specs";
 import BottomBanner from "../components/BottomBanner";
 import "../index.css";
 
-
 function Air() {
   useInactivityRedirect();
 
@@ -24,32 +23,33 @@ function Air() {
         <h1>MacBook Air</h1>
 
         {/* Segmented control */}
-        <div className="segmented-control">
-          <button
-            className={is13 ? "active" : ""}
-            onClick={() => setSize("13")}
-          >
-            13"
-          </button>
-          <button
-            className={!is13 ? "active" : ""}
-            onClick={() => setSize("15")}
-          >
-            15"
-          </button>
+        <div className="segment-container">
+          <h3 style={{ marginTop: "33px" }}>Skjástærð: </h3>
+          <div className="segmented-control">
+            <button
+              className={is13 ? "active" : ""}
+              onClick={() => setSize("13")}
+            >
+              13"
+            </button>
+            <button
+              className={!is13 ? "active" : ""}
+              onClick={() => setSize("15")}
+            >
+              15"
+            </button>
+          </div>
         </div>
       </div>
 
       <ProductLayout
         leftBottom={
-          <Specs
-            model={is13 ? "macbook-air-13" : "macbook-air-15"}
-          />
+          <Specs model={is13 ? "macbook-air-13" : "macbook-air-15"} />
         }
         right={is13 ? <ChipComparison13 /> : <ChipComparison15 />}
       />
 
-      <BottomBanner text="uppítaka" />
+      <BottomBanner />
     </div>
   );
 }
