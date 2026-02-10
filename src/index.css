@@ -181,8 +181,8 @@ button:focus {
   top: 50%;
   transform: translateY(-50%);
 
-  width: 48px; /* 👈 touch target */
-  height: 48px;
+  width: 55px; /* 👈 touch target */
+  height: 55px;
 
   display: flex;
   align-items: center;
@@ -194,7 +194,7 @@ button:focus {
   background: rgba(0, 0, 0, 0.06);
   color: #1d1d1f;
 
-  font-size: 20px; /* arrow scales with size */
+  font-size: 30px; /* arrow scales with size */
   font-weight: 600;
   line-height: 1;
 
