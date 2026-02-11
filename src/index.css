@@ -312,6 +312,21 @@ button:focus {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
+  grid-template-areas:
+    "a c"
+    "b .";
+}
+
+.pricing-grid .storage-option:nth-child(1) {
+  grid-area: a;
+}
+
+.pricing-grid .storage-option:nth-child(2) {
+  grid-area: b;
+}
+
+.pricing-grid .storage-option:nth-child(3) {
+  grid-area: c;
 }
 
 .storage-option {

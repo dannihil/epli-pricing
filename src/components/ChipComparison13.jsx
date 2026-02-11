@@ -13,7 +13,7 @@ function ChipComparison13() {
             gpu: "8-core GPU",
             storageOptions: [
               { storage: "256GB", ram: "16GB", price: "189.990 kr" },
-              { storage: "512GB", ram: "16GB", price: "349.990 kr" },
+              { storage: "512GB", ram: "16GB", price: "229.990 kr" },
             ],
           },
           {
