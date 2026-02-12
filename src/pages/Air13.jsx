@@ -16,7 +16,7 @@ function Air() {
   const is13 = size === "13";
 
   return (
-    <div className="home">
+    <div className="home air-page">
       <BackButton />
 
       <div className="page-header hero-header">

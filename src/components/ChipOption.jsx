@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "../index.css";
 
-function ChipOption({ title, variants = [], battery }) {
+function ChipOption({ title, variants = [], battery, layout }) {
   if (!variants.length) return null;
 
   return (
-    <div className="chip-card">
+    <div className={`chip-card ${layout || ""}`}>
       <h2>{title}</h2>
 
       {/* ONE dark container */}

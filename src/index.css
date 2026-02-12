@@ -308,24 +308,86 @@ button:focus {
    Pricing Cards
 ========================= */
 
-.pricing-grid {
+.air-page .pricing-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
   grid-template-areas:
     "a c"
-    "b .";
+    "b d";
 }
 
-.pricing-grid .storage-option:nth-child(1) {
+.air-page .pricing-grid .storage-option:nth-child(1) {
   grid-area: a;
 }
 
-.pricing-grid .storage-option:nth-child(2) {
+.air-page .pricing-grid .storage-option:nth-child(2) {
+  grid-area: c;
+}
+
+.air-page .pricing-grid .storage-option:nth-child(3) {
+  grid-area: d;
+}
+
+.pro-page .pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  grid-template-areas:
+    "a c"
+    "b d";
+}
+
+.pro-page .pricing-grid .storage-option:nth-child(1) {
+  grid-area: a;
+}
+
+.pro-page .pricing-grid .storage-option:nth-child(2) {
   grid-area: b;
 }
 
-.pricing-grid .storage-option:nth-child(3) {
+.pro-page .pricing-grid .storage-option:nth-child(3) {
+  grid-area: c;
+}
+.pro-page .pricing-grid .storage-option:nth-child(4) {
+  grid-area: d;
+}
+
+/* M4 Pro layout (4 items standard) */
+.chip-card.m4-pro-layout .pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  grid-template-areas:
+    "a b"
+    "c d";
+}
+
+.chip-card.m4-pro-layout .storage-option:nth-child(1) {
+  grid-area: a;
+}
+.chip-card.m4-pro-layout .storage-option:nth-child(2) {
+  grid-area: b;
+}
+.chip-card.m4-pro-layout .storage-option:nth-child(3) {
+  grid-area: c;
+}
+.chip-card.m4-pro-layout .storage-option:nth-child(4) {
+  grid-area: d;
+}
+
+/* M4 Max layout (2 variants, 2nd should be in spot C) */
+.chip-card.m4-max-layout .pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  grid-template-areas: "a c";
+}
+
+.chip-card.m4-max-layout .storage-option:nth-child(1) {
+  grid-area: a;
+}
+.chip-card.m4-max-layout .storage-option:nth-child(2) {
   grid-area: c;
 }
 
@@ -383,6 +445,40 @@ button:focus {
   font-size: 1.2rem;
   font-weight: 600;
   color: #1d1d1f;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.tradein-list {
+  list-style: none; /* removes dots */
+  padding: 0; /* removes left spacing */
+  margin: 1rem 0;
+}
+
+.tradein-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
 }
 
 /* =========================

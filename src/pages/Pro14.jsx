@@ -15,7 +15,7 @@ function Pro() {
   const is14 = size === "14";
 
   return (
-    <div className="home">
+    <div className="home pro-page">
       <BackButton />
 
       <div className="page-header hero-header">

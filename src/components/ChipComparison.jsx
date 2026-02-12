@@ -6,6 +6,7 @@ function ChipComparison() {
     <div className="chip-grid">
       <ChipOption
         title="M4 Pro chip"
+        layout="m4-pro-layout"
         variants={[
           {
             id: "pro-14-20",
@@ -24,6 +25,7 @@ function ChipComparison() {
 
       <ChipOption
         title="M4 Max chip"
+        layout="m4-max-layout"
         variants={[
           {
             id: "max-14-32",
