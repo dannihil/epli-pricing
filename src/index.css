@@ -468,6 +468,13 @@ button:focus {
   max-width: 400px;
 }
 
+.modal-content button {
+  display: block;
+  margin: 24px auto 0;
+  padding: 12px 28px;
+  font-size: 1rem;
+}
+
 .tradein-list {
   list-style: none; /* removes dots */
   padding: 0; /* removes left spacing */

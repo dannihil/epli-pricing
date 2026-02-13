@@ -1,7 +1,22 @@
 import { useState } from "react";
 
-function BottomBanner() {
+function BottomBanner({ productType }) {
   const [showModal, setShowModal] = useState(false);
+
+  const tradeInExamples = {
+    air: [
+      { label: 'MacBook Air 13" M2 256GB', price: "30.013 kr" },
+      { label: 'MacBook Air 13" M3 256GB', price: "42.576 kr" },
+      { label: 'MacBook Air 15" M2 256GB', price: "39.299 kr" },
+      { label: 'MacBook Air 15" M3 256GB', price: "51.316 kr" },
+    ],
+    pro: [
+      { label: 'MacBook Pro 14" M2 Pro 512GB', price: "64.425 kr" },
+      { label: 'MacBook Pro 14" M3 Pro 512GB', price: "79.719 kr" },
+      { label: 'MacBook Pro 16" M2 Pro 512GB', price: "73.165 kr" },
+      { label: 'MacBook Pro 16" M3 Pro 512GB', price: "95.014 kr" },
+    ],
+  };
 
   return (
     <>
@@ -25,20 +40,20 @@ function BottomBanner() {
         <div className="modal-overlay" onClick={() => setShowModal(false)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <h2>Sjáðu hvað þú gætir fengið fyrir Mac</h2>
+
             <ul className="tradein-list">
-              <li>
-                <span>MacBook Pro 16" M1 Pro 512 GB</span>
-                <span>50.111 kr</span>
-              </li>
-              <li>
-                <span>MacBook Air 13" M2 256GB</span>
-                <span>32.681 kr</span>
-              </li>
-              <li>
-                <span>MacBook Air 13" M1 256GB</span>
-                <span>20.698 kr</span>
-              </li>
+              {tradeInExamples[productType]?.map((item, i) => (
+                <li key={i}>
+                  <span>{item.label}</span>
+                  <span>{item.price}</span>
+                </li>
+              ))}
             </ul>
+            <p style={{ fontSize: "10px" }}>
+              Uppítökuvirði er mismunandi eftir ástandi, árgerð, framleiðanda,
+              gengi dagsins og fleiru. Endanlegt verðmat fer fram hjá sölumanni
+              í verslun eftir ítarlega skoðun á tækinu.
+            </p>
             <button onClick={() => setShowModal(false)}>Loka</button>
           </div>
         </div>

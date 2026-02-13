@@ -48,7 +48,7 @@ function Pro() {
         right={is14 ? <ChipComparison14 /> : <ChipComparison16 />}
       />
 
-      <BottomBanner />
+      <BottomBanner productType="pro" />
     </div>
   );
 }

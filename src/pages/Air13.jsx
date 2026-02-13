@@ -49,7 +49,7 @@ function Air() {
         right={is13 ? <ChipComparison13 /> : <ChipComparison15 />}
       />
 
-      <BottomBanner />
+      <BottomBanner productType="air" />
     </div>
   );
 }
