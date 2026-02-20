@@ -15,6 +15,7 @@ function Home() {
         <button onClick={() => navigate("/macbook-air")}>MacBook Air</button>
 
         <button onClick={() => navigate("/macbook-pro")}>MacBook Pro</button>
+        <button onClick={() => navigate("/imac")}>iMac</button>
       </div>
       <div className="footer-ele">
         <img src="../assets/epli_logo.png" alt="Epli logo" className="logo" />

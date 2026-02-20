@@ -308,6 +308,31 @@ button:focus {
    Pricing Cards
 ========================= */
 
+.imac-page .pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  grid-template-areas:
+    "a d"
+    "b e"
+    "c f";
+}
+
+.imac-page .pricing-grid .storage-option:nth-child(1) {
+  grid-area: a;
+}
+
+.imac-page .pricing-grid .storage-option:nth-child(2) {
+  grid-area: d;
+}
+
+.imac-page .pricing-grid .storage-option:nth-child(3) {
+  grid-area: e;
+}
+.imac-page .pricing-grid .storage-option:nth-child(4) {
+  grid-area: f;
+}
+
 .air-page .pricing-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

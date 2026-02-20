@@ -16,6 +16,10 @@ function BottomBanner({ productType }) {
       { label: 'MacBook Pro 16" M2 Pro 512GB', price: "73.165 kr" },
       { label: 'MacBook Pro 16" M3 Pro 512GB', price: "95.014 kr" },
     ],
+    imac: [
+      { label: 'iMac 24" M1 256GB/8GB', price: "35.287 kr" },
+      { label: 'iMac 24" M3 256GB/8GB', price: "48.369 kr" },
+    ],
   };
 
   return (
@@ -39,7 +43,7 @@ function BottomBanner({ productType }) {
       {showModal && (
         <div className="modal-overlay" onClick={() => setShowModal(false)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <h2>Sjáðu hvað þú gætir fengið fyrir Mac</h2>
+            <h2>Uppítökudæmi</h2>
 
             <ul className="tradein-list">
               {tradeInExamples[productType]?.map((item, i) => (

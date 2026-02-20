@@ -6,6 +6,7 @@ import Air13 from "./pages/Air13";
 import Air15 from "./pages/Air15";
 import Pro14 from "./pages/Pro14";
 import Pro16 from "./pages/Pro16";
+import Imac from "./pages/Imac";
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
       {/*<Route path="/macbook-air" element={<Product product="air" />} />*/}
       {/*<Route path="/macbook-pro" element={<Product product="pro" />} />*/}
 
-      <Route path="/macbook-air" element={<Air13/>}/>
-      <Route path="/macbook-pro" element={<Pro14/>}/>
+      <Route path="/macbook-air" element={<Air13 />} />
+      <Route path="/macbook-pro" element={<Pro14 />} />
+      <Route path="/imac" element={<Imac />} />
 
       <Route path="/macbook-air/13" element={<Air13 />} />
       <Route path="/macbook-air/15" element={<Air15 />} />

@@ -36,7 +36,7 @@ export const SPECS = {
     },
     {
       title: "Tengimöguleikar",
-      items: ["MagSafe 3", "2x Thunderbolt / USB-C", "3.5 mm heyrnatól"],
+      items: ["MagSafe 3", "2x Thunderbolt / USB-C", "3.5mm jack"],
     },
   ],
   "macbook-air-15": [
@@ -46,7 +46,21 @@ export const SPECS = {
     },
     {
       title: "Tengimöguleikar",
-      items: ["MagSafe 3", "2x Thunderbolt / USB-C", "3.5 mm heyrnatól"],
+      items: ["MagSafe 3", "2x Thunderbolt / USB-C", "3.5mm jack"],
+    },
+  ],
+  imac: [
+    {
+      title: "Liquid Retina skjár",
+      items: ["4480×2520 upplausn", "500 nits", "True Tone"],
+    },
+    {
+      title: "Tengimöguleikar",
+      items: [
+        "8/8: 2x Thunderbolt / USB-C",
+        "10/10: 4x Thunderbolt / USB-C",
+        "3.5mm jack",
+      ],
     },
   ],
 };
