@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Neo from "./pages/Neo";
 import NeoPriceTest from "./pages/NeoPriceTest";
 import Air13 from "./pages/Air13";
+import AirTest from "./pages/AirTest";
 import Air15 from "./pages/Air15";
 import Pro14 from "./pages/Pro14";
 import Pro16 from "./pages/Pro16";

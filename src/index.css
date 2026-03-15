@@ -954,6 +954,10 @@ h1 {
   color: #777;
 }
 
+.neo-price-card {
+  text-align: center;
+}
+
 .neo-price-container {
   display: flex;
   background: white;
@@ -964,12 +968,19 @@ h1 {
   margin-bottom: 25px;
 }
 
+.neo-inner-price-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 20px;
+}
+
 .neo-price-option {
   text-align: center;
 }
 
 .neo-price-option h2 {
-  font-size: 30px;
+  font-size: 24px;
   margin-bottom: 6px;
 }
 
@@ -979,13 +990,25 @@ h1 {
 }
 
 .neo-price {
-  font-size: 42px;
+  font-size: 36px;
   font-weight: 600;
+}
+.neo-offer-price {
+  font-size: 24px;
+  font-weight: 600;
+  color: red;
+  margin-top: -10px;
 }
 
 .neo-divider {
   width: 1px;
-  height: 90px;
+  height: 200px;
+  background: #ddd;
+}
+.neo-inner-divider {
+  width: 0.5px;
+  height: 120px;
+  margin-top: 35px;
   background: #ddd;
 }
 
