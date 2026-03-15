@@ -1,0 +1,952 @@
+/* =========================
+   Base / Reset
+========================= */
+
+:root {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+    system-ui, sans-serif;
+
+  color-scheme: light;
+  background-color: #f5f5f7;
+  color: #1d1d1f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f5f5f7;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+
+  pointer-events: none;
+}
+
+.segment-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  gap: 10px;
+}
+
+.segmented-control {
+  margin-top: 16px;
+
+  display: inline-flex;
+  padding: 4px;
+
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 999px;
+  gap: 4px;
+}
+
+.segmented-control button {
+  border: none;
+  background: transparent;
+
+  padding: 10px 20px;
+  border-radius: 999px;
+
+  font-size: 1.3rem;
+  font-weight: 600;
+
+  color: #1d1d1f;
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.segmented-control button.active {
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.bottom-banner {
+  max-width: 86vw;
+  max-height: 80px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  margin-top: -40px;
+
+  background: #009900; /* Apple system green */
+  color: #ffffff;
+
+  border-radius: 16px;
+
+  padding: 20px 24px;
+
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* =========================
+   Typography
+========================= */
+
+h1 {
+  font-size: 2.75rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  color: #1d1d1f;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin: 32px 0 12px;
+  color: #1d1d1f;
+}
+
+p,
+li {
+  font-size: 0.95rem;
+  color: #424245;
+}
+
+li::marker {
+  color: #86868b;
+}
+
+.page-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: -40px;
+}
+
+/* =========================
+   Buttons (general UI)
+========================= */
+
+.logo {
+  height: 18vh;
+  margin-top: 50px;
+}
+
+.footer-ele {
+  display: flex;
+  flex-direction: column; /* stack logo + text */
+  align-items: center; /* horizontal center */
+  justify-content: center; /* vertical center if height exists */
+  text-align: center;
+}
+
+button {
+  background: rgba(0, 0, 0, 0.04);
+  color: #1d1d1f;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+button:focus {
+  outline: none;
+}
+
+.back-button {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 55px; /* 👈 touch target */
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  border: none;
+
+  background: rgba(0, 0, 0, 0.06);
+  color: #1d1d1f;
+
+  font-size: 30px; /* arrow scales with size */
+  font-weight: 600;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+.back-button:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.back-button:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+/* =========================
+   Product Layout
+========================= */
+
+.product-layout {
+  display: flex;
+  justify-content: center; /* center group */
+  align-items: stretch;
+  gap: 100px; /* 👈 smaller, realistic gap */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 24px;
+}
+
+.product-left {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.06),
+    0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.product-left h2 {
+  opacity: 0.9;
+}
+
+.product-left p,
+.product-left li {
+  color: #424245;
+}
+
+.product-left img {
+  width: 100%;
+  max-width: 520px;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.product-left h2:not(:first-child) {
+  margin-top: 32px;
+}
+
+/* Specs container (LEFT) */
+.product-bottom {
+  height: 100%; /* ✅ no flex centering */
+}
+
+/* ChipComparison container (RIGHT) */
+
+/* =========================
+   Chip Sections
+========================= */
+
+.chip-card {
+  width: 100%;
+}
+
+.chip-card h2 {
+  margin-top: 0;
+  opacity: 0.9;
+}
+
+/* ONE dark box per chip */
+.variant-container {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px;
+
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.06),
+    0 8px 24px rgba(0, 0, 0, 0.08);
+
+  margin-bottom: 15px;
+}
+
+.variant-container + .variant-container {
+  margin-top: 24px;
+}
+
+/* CPU / GPU labels */
+.variant-headers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 16px;
+  margin-left: 16px;
+  font-weight: 600;
+}
+
+/* Full-page container */
+.container {
+  position: relative; /* needed for absolute positioning of overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Video styles */
+.intro-video {
+  width: 800px;
+  margin-top: 100px;
+  max-width: 90%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 7s ease;
+}
+
+/* Fade-in on load */
+.fade-in {
+  opacity: 1;
+}
+
+/* Image overlay after video ends */
+.video-overlay {
+  position: absolute; /* float on top of video */
+  top: 15%; /* center vertically */
+  left: 50%; /* center horizontally */
+  transform: translate(-50%, -50%); /* center exactly */
+  max-width: 50%; /* adjust size as needed */
+  opacity: 0;
+  animation: fadeInImage 1.5s ease forwards;
+}
+
+@keyframes fadeInImage {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Button overlay */
+.video-button {
+  position: absolute;
+  top: 23%; /* directly under the image */
+  left: 44%;
+  transform: translateY(20px); /* optional spacing */
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+    system-ui, sans-serif;
+  background-color: #231f20;
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards; /* same animation as image */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.feature-section {
+  width: 100%;
+  padding: 120px 0;
+}
+
+.feature-container {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.feature-image img {
+  width: 500px;
+  max-width: 100%;
+}
+
+.feature-text {
+  max-width: 420px;
+}
+
+.feature-text h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.feature-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Reverse layout */
+.reverse .feature-container {
+  flex-direction: row-reverse;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .feature-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .reverse .feature-container {
+    flex-direction: column;
+  }
+}
+/* =========================
+   Pricing Cards
+========================= */
+
+.studiodisplay-page .pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  grid-template-areas:
+    "a d"
+    "b e"
+    "c f";
+}
+
+.studiodisplay-page .pricing-grid .storage-option:nth-child(1) {
+  grid-area: a;
+}
+
+.studiodisplay-page .pricing-grid .storage-option:nth-child(2) {
+  grid-area: d;
+}
+
+.studiodisplay-page .pricing-grid .storage-option:nth-child(3) {
+  grid-area: c;
+}
+
+.imac-page .pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  grid-template-areas:
+    "a d"
+    "b e"
+    "c f";
+}
+
+.imac-page .pricing-grid .storage-option:nth-child(1) {
+  grid-area: a;
+}
+
+.imac-page .pricing-grid .storage-option:nth-child(2) {
+  grid-area: d;
+}
+
+.imac-page .pricing-grid .storage-option:nth-child(3) {
+  grid-area: e;
+}
+.imac-page .pricing-grid .storage-option:nth-child(4) {
+  grid-area: f;
+}
+
+.macmini-page .pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  grid-template-areas:
+    "a d"
+    "b e"
+    "c f";
+}
+
+.macmini-page .pricing-grid .storage-option:nth-child(1) {
+  grid-area: a;
+}
+
+.macmini-page .pricing-grid .storage-option:nth-child(2) {
+  grid-area: d;
+}
+
+.macmini-page .pricing-grid .storage-option:nth-child(3) {
+  grid-area: b;
+}
+
+.air-page .pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  grid-template-areas:
+    "a c"
+    "b d";
+}
+
+.air-page .pricing-grid .storage-option:nth-child(1) {
+  grid-area: a;
+}
+
+.air-page .pricing-grid .storage-option:nth-child(2) {
+  grid-area: c;
+}
+
+.air-page .pricing-grid .storage-option:nth-child(3) {
+  grid-area: d;
+}
+
+.pro-page .pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  grid-template-areas:
+    "a c"
+    "b d";
+}
+
+.pro-page .pricing-grid .storage-option:nth-child(1) {
+  grid-area: a;
+}
+
+.pro-page .pricing-grid .storage-option:nth-child(2) {
+  grid-area: b;
+}
+
+.pro-page .pricing-grid .storage-option:nth-child(3) {
+  grid-area: c;
+}
+.pro-page .pricing-grid .storage-option:nth-child(4) {
+  grid-area: d;
+}
+
+/* M4 Pro layout (4 items standard) */
+.chip-card.m4-pro-layout .pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  grid-template-areas:
+    "a b"
+    "c d";
+}
+
+.chip-card.m4-pro-layout .storage-option:nth-child(1) {
+  grid-area: a;
+}
+.chip-card.m4-pro-layout .storage-option:nth-child(2) {
+  grid-area: b;
+}
+.chip-card.m4-pro-layout .storage-option:nth-child(3) {
+  grid-area: d;
+}
+
+/* M4 Max layout (2 variants, 2nd should be in spot C) */
+.chip-card.m4-max-layout .pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  grid-template-areas: "a c";
+}
+
+.chip-card.m4-max-layout .storage-option:nth-child(1) {
+  grid-area: a;
+}
+.chip-card.m4-max-layout .storage-option:nth-child(2) {
+  grid-area: c;
+}
+
+.storage-option {
+  display: grid;
+  grid-template-columns: 1fr auto; /* specs | price */
+  gap: 30px; /* 👈 MORE SPACE HERE */
+  align-items: center;
+  background: #ffffff;
+  color: #1d1d1f;
+  border-radius: 16px;
+  padding: 16px 18px;
+  position: relative;
+
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.05),
+    0 6px 18px rgba(0, 0, 0, 0.1);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.storage-option::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: calc(50% + 1px); /* half + half of gap */
+
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.08),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.storage-option:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.12),
+    0 14px 30px rgba(0, 0, 0, 0.16);
+}
+
+.storage-top {
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #383838;
+}
+
+.storage-top-SD {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #383838;
+}
+
+.storage-price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.modal-content button {
+  display: block;
+  margin: 24px auto 0;
+  padding: 12px 28px;
+  font-size: 1rem;
+}
+
+.tradein-list {
+  list-style: none; /* removes dots */
+  padding: 0; /* removes left spacing */
+  margin: 1rem 0;
+}
+
+.tradein-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* =========================
+   Specs
+========================= */
+
+ul {
+  padding-left: 18px;
+  margin: 8px 0 16px;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+.model-select {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  gap: 32px;
+}
+
+.model-options {
+  display: flex;
+  gap: 16px;
+}
+
+.model-button {
+  min-width: 220px;
+
+  background: #ffffff;
+  color: #1d1d1f;
+
+  border: none;
+  border-radius: 14px;
+
+  padding: 14px 20px;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.06),
+    0 8px 24px rgba(0, 0, 0, 0.08);
+
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.model-button:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.12),
+    0 14px 30px rgba(0, 0, 0, 0.16);
+}
+
+.model-button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.model-select h1 {
+  margin-bottom: 8px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 4 cards per row */
+  gap: 24px;
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.product-grid-prod-page {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+  gap: 24px;
+  margin-bottom: 70px;
+  max-width: 900px;
+}
+
+.product-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 30px 20px;
+  padding-bottom: 130px; /* space for price */
+
+  text-align: center;
+  max-width: 280px;
+
+  position: relative;
+}
+
+.product-image img {
+  width: 140px;
+  transition: opacity 0.2s ease;
+}
+
+.product-model {
+  font-size: 12px;
+  color: #8a8a8a;
+  margin-bottom: 6px;
+}
+
+.product-name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.product-price-label {
+  font-size: 14px;
+  color: #6e6e73;
+}
+
+.product-price {
+  font-size: 20px;
+  font-weight: 500;
+
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+
+  text-align: center;
+}
+
+.color-options {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+
+  position: absolute;
+  bottom: 70px; /* 10px above price */
+
+  left: 0;
+  right: 0;
+}
+
+.color-button {
+  width: 50px;
+  height: 50px;
+  border: 1px solid transparent;
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.color-button.active {
+  border-color: #0071e3;
+}
+
+.color-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
+
+.hero-video {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 40px;
+}
+
+.home-buttons button {
+  min-width: 260px;
+  min-height: 100px; /* Apple touch target */
+
+  background: #ffffff;
+  color: #1d1d1f;
+
+  border: none;
+  border-radius: 18px; /* softer, iPad-like */
+
+  padding: 16px 24px; /* larger hit area */
+
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.06),
+    0 8px 24px rgba(0, 0, 0, 0.08);
+
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.home-buttons button:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.12),
+    0 14px 30px rgba(0, 0, 0, 0.16);
+}
+
+.home-buttons button:active {
+  transform: scale(0.98);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.normal-price {
+  font-size: 1.2rem;
+  text-decoration: line-through;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+.offer-price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ff3b30; /* Apple red */
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 900px) {
+  .product-layout {
+    flex-direction: column;
+  }
+
+  .product-bottom,
+  .product-right {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 700px) {
+  .variant-headers,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .model-options {
+    flex-direction: column;
+  }
+
+  .model-button {
+    width: 100%;
+  }
+}
