@@ -49,7 +49,7 @@ function Neo() {
         <h1 style={{ fontWeight: 700 }}>
           Drifkraftur fyrir allt sem þú gerir.
         </h1>
-        <h3 style={{ color: "gray" }}>
+        <h3 style={{ color: "#666565" }}>
           Með A18 Pro flögunni geturðu keyrt uppáhaldsöppin þín, sinnt daglegum
           verkefnum á augabragði, verið skapandi og spilað hasarleiki. Svo sama
           hvað dagurinn ber í skauti sér, þá geturðu haldið í við allt sem

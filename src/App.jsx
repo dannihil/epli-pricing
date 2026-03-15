@@ -3,7 +3,7 @@ import HomeLaptop from "./pages/HomeLaptop";
 import HomeDesktop from "./pages/HomeDesktop";
 import Home from "./pages/Home";
 import Neo from "./pages/Neo";
-import NeoPrice from "./pages/NeoPrice";
+import NeoPriceTest from "./pages/NeoPriceTest";
 import Air13 from "./pages/Air13";
 import Air15 from "./pages/Air15";
 import Pro14 from "./pages/Pro14";
@@ -28,7 +28,7 @@ function App() {
       {/*<Route path="/macbook-pro" element={<Product product="pro" />} />*/}
 
       <Route path="/macbook-neo" element={<Neo />} />
-      <Route path="/macbook-neo-price" element={<NeoPrice />} />
+      <Route path="/macbook-neo-price" element={<NeoPriceTest />} />
       <Route path="/macbook-air" element={<Air13 />} />
       <Route path="/macbook-pro" element={<Pro14 />} />
       <Route path="/imac" element={<Imac />} />
