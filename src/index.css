@@ -60,7 +60,7 @@ body::after {
   padding: 10px 20px;
   border-radius: 999px;
 
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: 600;
 
   color: #1d1d1f;
@@ -197,6 +197,8 @@ button:focus {
 
   cursor: pointer;
 
+  z-index: 100;
+
   transition:
     background 0.2s ease,
     transform 0.15s ease;
@@ -318,6 +320,22 @@ button:focus {
   opacity: 0;
   transition: opacity 7s ease;
 }
+.header-img {
+  width: 600px;
+  margin-top: 150px;
+  max-width: 90%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.header-img-pro {
+  width: 400px;
+  margin-top: 250px;
+  max-width: 90%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
 
 /* Fade-in on load */
 .fade-in {
@@ -345,7 +363,7 @@ button:focus {
 .video-button {
   position: absolute;
   top: 22%; /* directly under the image */
-  left: 43%;
+  left: 42%;
   transform: translateY(20px); /* optional spacing */
   padding: 1rem 3rem;
   font-size: 1.4rem;
@@ -354,6 +372,31 @@ button:focus {
     system-ui, sans-serif;
   background-color: #231f20;
   color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards; /* same animation as image */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+/* Button overlay */
+.video-button-pro {
+  position: absolute;
+  top: 22%; /* directly under the image */
+  left: 42%;
+  transform: translateY(20px); /* optional spacing */
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+    system-ui, sans-serif;
+  background-color: #ffffff;
+  color: #231f20;
   border: none;
   border-radius: 25px;
   cursor: pointer;
@@ -925,13 +968,44 @@ li {
   background: #f5f5f7;
   padding: 40px;
   box-sizing: border-box;
+  margin-top: -60px;
 }
 
 .neo-header {
   display: flex;
-  align-items: center;
-  gap: 40px;
+  align-items: space-between;
+  gap: 30px;
   margin-bottom: 30px;
+  margin-top: 40px;
+}
+.neo-header-air {
+  display: flex;
+  align-items: space-between;
+  gap: 300px;
+  margin-bottom: 30px;
+}
+
+.neo-order-tag {
+  height: 100px;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  background-color: red;
+  border-radius: 25px;
+}
+.neo-order-tag h2 {
+  color: white;
+  font-size: 30px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.neo-order-tag p {
+  color: white;
+  font-size: 20px;
+  margin-top: -20px;
 }
 
 .neo-product-image {
@@ -941,6 +1015,88 @@ li {
 h1 {
   font-size: 48px;
   margin: 0;
+}
+
+.pro-main-page body {
+  background: #000;
+}
+
+.pro-m5-family-section {
+  height: 550px;
+  background-color: rgb(22, 22, 22);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pro-text-section {
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-weight: 600;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  text-align: center;
+  padding: 60px;
+}
+.pro-text-section h1 {
+  background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background-image: linear-gradient(
+    90deg,
+    #e4f6f0,
+    #9dcfca 31%,
+    #6b95ac 68%,
+    #45657d
+  );
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+.pro-text-section p {
+  background-color: #000000;
+  text-align: center;
+  font-family:
+    SF Pro Display,
+    SF Pro Icons,
+    Helvetica Neue,
+    Helvetica,
+    Arial,
+    sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.381002381;
+  font-weight: 600;
+  letter-spacing: 0.011em;
+  max-width: 836px;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #989898;
+}
+.pro-text-section #sub-section {
+  background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background-image: linear-gradient(
+    90deg,
+    #e4f6f0,
+    #9dcfca 31%,
+    #6b95ac 68%,
+    #45657d
+  );
+  font-size: 2rem;
+  font-weight: 600;
+}
+.pro-text-section span {
+  color: #f5f5f7;
 }
 
 .neo-chip {
@@ -994,7 +1150,7 @@ h1 {
   font-weight: 600;
 }
 .neo-offer-price {
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 600;
   color: red;
   margin-top: -10px;
@@ -1002,12 +1158,17 @@ h1 {
 
 .neo-divider {
   width: 1px;
-  height: 200px;
+  height: 100px;
   background: #ddd;
+}
+.neo-divider-air {
+  width: 1px;
+  height: 250px;
+  background: #b7b7b7;
 }
 .neo-inner-divider {
   width: 0.5px;
-  height: 120px;
+  height: 200px;
   margin-top: 35px;
   background: #ddd;
 }

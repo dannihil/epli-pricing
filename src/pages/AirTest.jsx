@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import useInactivityRedirect from "../hooks/useInactivityRedirect";
 import "../index.css";
 import ProductCard from "../components/ProductCard";
+import BackButton from "../components/BackButton";
 
 function AirTest() {
   useInactivityRedirect();
+
+  const [size, setSize] = useState("13");
+  const is13 = size === "13";
   return (
     <div className="neo-screen">
-      <div className="neo-header">
-        <div style={{ display: "flex", alignItems: "center", gap: "40px" }}>
+      <BackButton />
+      <div className="neo-header-air" style={{ marginBottom: "-30px" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
           <img
             className="neo-product-image"
             src="/assets/air.png"
@@ -21,54 +26,133 @@ function AirTest() {
           </div>
         </div>
 
-        <div
-          style={{
-            textAlign: "center",
-            backgroundColor: "red",
-            padding: "0px 15px",
-            borderRadius: "25px",
-          }}
-        >
+        <div className="neo-order-tag">
           <h2>Fermingartilboð</h2>
           <p>Gildir til 9 apríl</p>
         </div>
       </div>
 
+      <div
+        className="segment-container"
+        style={{ marginBottom: "20px", marginTop: "-50px" }}
+      >
+        <h3 style={{ marginTop: "33px" }}>Skjástærð: </h3>
+
+        <div className="segmented-control">
+          <button
+            className={is13 ? "active" : ""}
+            onClick={() => setSize("13")}
+          >
+            13"
+          </button>
+
+          <button
+            className={!is13 ? "active" : ""}
+            onClick={() => setSize("15")}
+          >
+            15"
+          </button>
+        </div>
+      </div>
+
       <div className="neo-price-container">
-        <div className="neo-price-card">
-          <p className="neo-cpu">10-core CPU / 8-core GPU</p>
-          <div className="neo-inner-price-container">
-            <div className="neo-price-option">
-              <h2>256GB SSD</h2>
-              <p className="neo-ram">16GB RAM</p>
-              <p className="neo-price">189.990 kr</p>
-              <p className="neo-offer-price">179.990 kr</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="neo-divider" />
-
-        <div>
-          <div className="neo-price-card">
-            <p className="neo-cpu">10-core CPU / 10-core GPU</p>
-            <div className="neo-inner-price-container">
-              <div className="neo-price-option">
-                <h2>512GB SSD</h2>
-                <p className="neo-ram">16GB RAM</p>
-                <p className="neo-price">229.990 kr</p>
-                <p className="neo-offer-price">219.990 kr</p>
-              </div>
-              <div className="neo-inner-divider" />
-              <div className="neo-price-option">
-                <h2>512GB SSD</h2>
-                <p className="neo-ram">24GB RAM</p>
-                <p className="neo-price">269.990 kr</p>
-                <p className="neo-offer-price">259.990 kr</p>
+        {size === "13" ? (
+          <>
+            {/* ===== 13 INCH PRICES (your current code) ===== */}
+            <div className="neo-price-card">
+              <p className="neo-cpu">10-core CPU / 8-core GPU</p>
+              <div className="neo-inner-price-container">
+                <div className="neo-price-option">
+                  <h2>256GB SSD</h2>
+                  <p className="neo-ram">16GB RAM</p>
+                  <p
+                    className="neo-price"
+                    style={{ textDecoration: "line-through" }}
+                  >
+                    189.990 kr
+                  </p>
+                  <p className="neo-offer-price">179.990 kr</p>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
+
+            <div className="neo-divider-air" />
+
+            <div className="neo-price-card">
+              <p className="neo-cpu">10-core CPU / 10-core GPU</p>
+              <div className="neo-inner-price-container">
+                <div className="neo-price-option">
+                  <h2>512GB SSD</h2>
+                  <p className="neo-ram">16GB RAM</p>
+                  <p
+                    className="neo-price"
+                    style={{ textDecoration: "line-through" }}
+                  >
+                    229.990 kr
+                  </p>
+                  <p className="neo-offer-price">219.990 kr</p>
+                </div>
+                <div className="neo-inner-divider" />
+                <div className="neo-price-option">
+                  <h2>512GB SSD</h2>
+                  <p className="neo-ram">24GB RAM</p>
+                  <p
+                    className="neo-price"
+                    style={{ textDecoration: "line-through" }}
+                  >
+                    269.990 kr
+                  </p>
+                  <p className="neo-offer-price">259.990 kr</p>
+                </div>
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            {/* ===== 15 INCH PRICES (CHANGE THESE VALUES) ===== */}
+
+            <div className="neo-price-card">
+              <p className="neo-cpu">10-core CPU / 10-core GPU</p>
+              <div className="neo-inner-price-container">
+                <div className="neo-price-option">
+                  <h2>256GB SSD</h2>
+                  <p className="neo-ram">16GB RAM</p>
+                  <p
+                    className="neo-price"
+                    style={{ textDecoration: "line-through" }}
+                  >
+                    229.990 kr
+                  </p>
+                  <p className="neo-offer-price">219.990 kr</p>
+                </div>
+                <div className="neo-inner-divider" />
+                <div className="neo-price-option">
+                  <h2>512GB SSD</h2>
+                  <p className="neo-ram">16GB RAM</p>
+                  <p
+                    className="neo-price"
+                    style={{ textDecoration: "line-through" }}
+                  >
+                    269.990 kr
+                  </p>
+                  <p className="neo-offer-price">259.990 kr</p>
+                </div>
+                <div className="neo-inner-divider" />
+                <div className="neo-price-option">
+                  <h2>512GB SSD</h2>
+                  <p className="neo-ram">24GB RAM</p>
+                  <p
+                    className="neo-price"
+                    style={{ textDecoration: "line-through" }}
+                  >
+                    309.990 kr
+                  </p>
+                  <p className="neo-offer-price">299.990 kr</p>
+                </div>
+              </div>
+            </div>
+          </>
+        )}
       </div>
 
       <div className="neo-trade-banner">
@@ -105,33 +189,29 @@ function AirTest() {
         <ProductCard
           variants={[
             {
-              model: "MD3J4ZM/A",
-              name: "Apple 20W USB-C hleðslutæki",
+              model: "ST-P6SS",
+              name: "Satechi 6-in-1 millistykki",
               color: "#e8e8e8",
+              price: "9.990",
+              image: "/assets/ST-P6SS.jpg",
+            },
+            {
+              model: "ST-P6SM",
+              name: "Satechi 6-in-1 millistykki",
+              color: "#959595",
+              price: "9.990",
+              image: "/assets/ST-P6SM.jpg",
+            },
+          ]}
+        />
+        <ProductCard
+          variants={[
+            {
+              model: "MW5L3ZM/A",
+              name: "Apple USB-C í USB-A breytistykki",
+              color: "#f5f5f7",
               price: "4.990",
-              image: "/assets/md3j4.jpg",
-            },
-          ]}
-        />
-        <ProductCard
-          variants={[
-            {
-              model: "MW2K3ZM/A",
-              name: "Apple 35W tvöfalt USB-C hleðslutæki",
-              color: "#f5f5f7",
-              price: "13.990",
-              image: "/assets/mw2k3.jpg",
-            },
-          ]}
-        />
-        <ProductCard
-          variants={[
-            {
-              model: "MW5M3ZM/A",
-              name: "Apple USB-C í digital AV fjöltengi",
-              color: "#f5f5f7",
-              price: "16.990",
-              image: "/assets/mw5m3.jpg",
+              image: "/assets/mw5l3.png",
             }, // white
           ]}
         />
@@ -151,6 +231,17 @@ function AirTest() {
               price: "23.990",
               image: "/assets/mxk63.jpg",
             }, // black
+          ]}
+        />
+        <ProductCard
+          variants={[
+            {
+              model: "MXP93ZM/A",
+              name: "Airpods 4 með hljóðeinangrun",
+              color: "#f5f5f7",
+              price: "34.990",
+              image: "/assets/mxp63.png",
+            }, // white
           ]}
         />
       </div>

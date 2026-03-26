@@ -5,7 +5,7 @@ function FeatureSection({ title, text, image, reverse, bgColor, titleColor }) {
   return (
     <section
       className={`feature-section ${reverse ? "reverse" : ""}`}
-      style={{ backgroundColor: bgColor }}
+      style={{ background: bgColor }}
     >
       <div className="feature-container">
         <div className="feature-image">
@@ -13,7 +13,15 @@ function FeatureSection({ title, text, image, reverse, bgColor, titleColor }) {
         </div>
 
         <div className="feature-text">
-          <h3 style={{ color: titleColor }}>{title}</h3>
+          <h3
+            style={{
+              background: titleColor,
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
+            {title}
+          </h3>
           <p>{text}</p>
         </div>
       </div>

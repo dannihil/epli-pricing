@@ -2,11 +2,13 @@ import React from "react";
 import useInactivityRedirect from "../hooks/useInactivityRedirect";
 import "../index.css";
 import ProductCard from "../components/ProductCard";
+import BackButton from "../components/BackButton";
 
 function NeoPriceTest() {
   useInactivityRedirect();
   return (
     <div className="neo-screen">
+      <BackButton />
       <div className="neo-header">
         <img
           className="neo-product-image"
@@ -24,7 +26,7 @@ function NeoPriceTest() {
       <div className="neo-price-container">
         <div className="neo-price-option">
           <h2>256GB SSD</h2>
-          <p className="neo-ram">8GB RAM</p>
+          <p className="neo-ram">8GB Memory</p>
           <p className="neo-price">119.990 kr</p>
         </div>
 
@@ -32,7 +34,7 @@ function NeoPriceTest() {
 
         <div className="neo-price-option">
           <h2>512GB SSD</h2>
-          <p className="neo-ram">8GB RAM</p>
+          <p className="neo-ram">8GB Memory</p>
           <p className="neo-price">139.990 kr</p>
         </div>
       </div>
@@ -40,6 +42,9 @@ function NeoPriceTest() {
       <div className="neo-trade-banner">
         ♻️ Uppítökutilboð — Við gefum þér <strong>15.000 kr</strong> aukalega
         fyrir gömlu tölvuna þína.
+        <p style={{ color: "#157c35" }}>
+          <strong>Smelltu fyrir frekari upplýsingar</strong>
+        </p>
       </div>
 
       <div className="neo-specs">
@@ -52,8 +57,7 @@ function NeoPriceTest() {
 
         <div className="neo-spec-box">
           <h4>Tengimöguleikar</h4>
-          <p>4× Thunderbolt 5</p>
-          <p>2× USB-C</p>
+          <p> 2x USB-C (1x USB 3, 1x USB 2)</p>
           <p>3.5mm jack</p>
         </div>
       </div>

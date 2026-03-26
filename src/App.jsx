@@ -16,12 +16,15 @@ import MacStudio from "./pages/MacStudio";
 import HomeImac from "./pages/HomeImac";
 import StudioDisplay from "./pages/StudioDisplay";
 import StudioDisplayXdr from "./pages/StudioDisplayXdr";
+import AirPage from "./pages/Air";
+import ProPage from "./pages/Pro";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/home-laptop" element={<HomeLaptop />} />
+      <Route path="/home-air" element={<AirPage />} />
+      <Route path="/home-pro" element={<ProPage />} />
       <Route path="/home-desktop" element={<HomeDesktop />} />
       <Route path="/home-imac" element={<HomeImac />} />
 
@@ -30,7 +33,7 @@ function App() {
 
       <Route path="/macbook-neo" element={<Neo />} />
       <Route path="/macbook-neo-price" element={<NeoPriceTest />} />
-      <Route path="/macbook-air" element={<Air13 />} />
+      <Route path="/macbook-air" element={<AirTest />} />
       <Route path="/macbook-pro" element={<Pro14 />} />
       <Route path="/imac" element={<Imac />} />
       <Route path="/imac-aukahlutir" element={<ImacAukahlutir />} />
