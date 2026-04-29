@@ -212,6 +212,15 @@ button:focus {
   transform: translateY(-50%) scale(0.95);
 }
 
+.back-button,
+.back-button:hover,
+.back-button:active,
+.back-button:focus,
+.back-button:focus-visible {
+  background: rgba(0, 0, 0, 0.06) !important;
+  color: #1d1d1f !important;
+}
+
 /* =========================
    Product Layout
 ========================= */
@@ -328,9 +337,16 @@ button:focus {
   opacity: 0;
   transition: opacity 1s ease;
 }
+.header-img-air {
+  width: 600px;
+  max-width: 90%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
 .header-img-pro {
   width: 400px;
-  margin-top: 250px;
+  margin-top: 100px;
   max-width: 90%;
   height: auto;
   opacity: 0;
@@ -359,6 +375,11 @@ button:focus {
   }
 }
 
+.overlay-content-pro {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Button overlay */
 .video-button {
   position: absolute;
@@ -378,6 +399,25 @@ button:focus {
   opacity: 0;
   animation: fadeIn 1.5s ease forwards; /* same animation as image */
 }
+.video-button-air {
+  transform: translateY(20px); /* optional spacing */
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+    system-ui, sans-serif;
+  background-color: #231f20;
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards; /* same animation as image */
+}
+.video-button-air::after {
+  background-color: #231f20;
+  color: #ffffff;
+}
 
 @keyframes fadeIn {
   to {
@@ -386,9 +426,6 @@ button:focus {
 }
 /* Button overlay */
 .video-button-pro {
-  position: absolute;
-  top: 22%; /* directly under the image */
-  left: 42%;
   transform: translateY(20px); /* optional spacing */
   padding: 1rem 3rem;
   font-size: 1.4rem;
@@ -402,6 +439,18 @@ button:focus {
   cursor: pointer;
   opacity: 0;
   animation: fadeIn 1.5s ease forwards; /* same animation as image */
+}
+.video-button-pro {
+  background-color: #ffffff;
+  color: #231f20;
+}
+.video-button-pro,
+.video-button-pro:hover,
+.video-button-pro:active,
+.video-button-pro:focus,
+.video-button-pro:focus-visible {
+  background: #ffffff !important;
+  color: #231f20 !important;
 }
 
 @keyframes fadeIn {
@@ -425,7 +474,7 @@ button:focus {
 }
 
 .feature-image img {
-  width: 500px;
+  width: 300px;
   max-width: 100%;
 }
 
@@ -604,7 +653,9 @@ button:focus {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
-  grid-template-areas: "a c";
+  grid-template-areas:
+    "a c"
+    "b d";
 }
 
 .chip-card.m4-max-layout .storage-option:nth-child(1) {
@@ -612,6 +663,9 @@ button:focus {
 }
 .chip-card.m4-max-layout .storage-option:nth-child(2) {
   grid-area: c;
+}
+.chip-card.m4-max-layout .storage-option:nth-child(3) {
+  grid-area: d;
 }
 
 .storage-option {

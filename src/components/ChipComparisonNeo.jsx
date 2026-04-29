@@ -12,8 +12,8 @@ function ChipComparisonNeo() {
             cpu: "6-core CPU",
             gpu: "5-core GPU",
             storageOptions: [
-              { storage: "256GB", ram: "8GB", price: "119.990 kr" },
-              { storage: "512GB", ram: "8GB", price: "139.990 kr" },
+              { storage: "256GB", ram: "8GB", price: "119.900 kr" },
+              { storage: "512GB", ram: "8GB", price: "139.900 kr" },
             ],
           },
         ]}

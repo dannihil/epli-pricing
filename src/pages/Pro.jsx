@@ -15,25 +15,32 @@ function ProPage() {
           background: "#000",
         }}
       >
-        <img
-          className="header-img-pro fade-in"
-          src="/assets/pro.png"
-          alt="MacBook Pro"
-        />
-
-        <div className="overlay-content">
+        <div className="overlay-content-pro">
           <h1
             className="video-overlay"
             style={{ fontSize: "70px", fontWeight: "700", color: "#fff" }}
           >
             MacBook Pro
           </h1>
-          <button
-            className="video-button-pro"
-            onClick={() => navigate("/macbook-pro")}
-          >
-            Verðlisti
-          </button>
+          <div style={{ display: "flex", gap: "20px", marginTop: "170px" }}>
+            <button
+              className="video-button-pro"
+              onClick={() => navigate("/macbook-pro-m4")}
+            >
+              Verðlisti M4
+            </button>
+            <button
+              className="video-button-pro"
+              onClick={() => navigate("/macbook-pro-m5")}
+            >
+              Verðlisti M5
+            </button>
+          </div>
+          <img
+            className="header-img-pro fade-in"
+            src="/assets/pro.png"
+            alt="MacBook Pro"
+          />
         </div>
       </div>
       <div

@@ -1,13 +1,15 @@
 import { Routes, Route } from "react-router-dom";
-import HomeLaptop from "./pages/HomeLaptop";
+import HomeLaptop from "./pages/smaralind/HomeLaptop";
 import HomeDesktop from "./pages/HomeDesktop";
 import Home from "./pages/Home";
 import Neo from "./pages/Neo";
 import NeoPriceTest from "./pages/NeoPriceTest";
 import Air13 from "./pages/Air13";
-import AirTest from "./pages/AirTest";
+import AirM4 from "./pages/AirM4";
+import AirM5 from "./pages/AirM5";
 import Air15 from "./pages/Air15";
-import Pro14 from "./pages/Pro14";
+import ProM4 from "./pages/Pro14";
+import ProM5 from "./pages/ProM5";
 import Pro16 from "./pages/Pro16";
 import Imac from "./pages/Imac";
 import ImacAukahlutir from "./pages/ImacAukahlutir";
@@ -27,14 +29,17 @@ function App() {
       <Route path="/home-pro" element={<ProPage />} />
       <Route path="/home-desktop" element={<HomeDesktop />} />
       <Route path="/home-imac" element={<HomeImac />} />
+      <Route path="/home-laptop-smaralind" element={<HomeLaptop />} />
 
       {/*<Route path="/macbook-air" element={<Product product="air" />} />*/}
       {/*<Route path="/macbook-pro" element={<Product product="pro" />} />*/}
 
       <Route path="/macbook-neo" element={<Neo />} />
       <Route path="/macbook-neo-price" element={<NeoPriceTest />} />
-      <Route path="/macbook-air" element={<AirTest />} />
-      <Route path="/macbook-pro" element={<Pro14 />} />
+      <Route path="/macbook-air-m4" element={<AirM4 />} />
+      <Route path="/macbook-air-m5" element={<AirM5 />} />
+      <Route path="/macbook-pro-m4" element={<ProM4 />} />
+      <Route path="/macbook-pro-m5" element={<ProM5 />} />
       <Route path="/imac" element={<Imac />} />
       <Route path="/imac-aukahlutir" element={<ImacAukahlutir />} />
       <Route path="/mac-mini" element={<MacMini />} />
@@ -44,9 +49,6 @@ function App() {
 
       <Route path="/macbook-air/13" element={<Air13 />} />
       <Route path="/macbook-air/15" element={<Air15 />} />
-
-      <Route path="/macbook-pro/14" element={<Pro14 />} />
-      <Route path="/macbook-pro/16" element={<Pro16 />} />
     </Routes>
   );
 }

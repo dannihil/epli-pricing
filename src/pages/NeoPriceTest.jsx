@@ -27,7 +27,7 @@ function NeoPriceTest() {
         <div className="neo-price-option">
           <h2>256GB SSD</h2>
           <p className="neo-ram">8GB Memory</p>
-          <p className="neo-price">119.990 kr</p>
+          <p className="neo-price">119.900 kr</p>
         </div>
 
         <div className="neo-divider" />
@@ -35,16 +35,12 @@ function NeoPriceTest() {
         <div className="neo-price-option">
           <h2>512GB SSD</h2>
           <p className="neo-ram">8GB Memory</p>
-          <p className="neo-price">139.990 kr</p>
+          <p className="neo-price">139.900 kr</p>
         </div>
       </div>
 
       <div className="neo-trade-banner">
-        ♻️ Uppítökutilboð — Við gefum þér <strong>15.000 kr</strong> aukalega
-        fyrir gömlu tölvuna þína.
-        <p style={{ color: "#157c35" }}>
-          <strong>Smelltu fyrir frekari upplýsingar</strong>
-        </p>
+        ♻️ Uppítaka - Við tökum gömlu tækin þín upp í ný!
       </div>
 
       <div className="neo-specs">

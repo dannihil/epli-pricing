@@ -2,14 +2,14 @@ import { useState } from "react";
 import useInactivityRedirect from "../hooks/useInactivityRedirect";
 import BackButton from "../components/BackButton";
 import ProductLayout from "../components/ProductLayout";
-import ChipComparison14 from "../components/ChipComparison14";
-import ChipComparison16 from "../components/ChipComparison";
+import ChipComparisonProM514 from "../components/ChipComparisonProM514";
+import ChipComparisonProM516 from "../components/ChipComparisonProM516";
 import Specs from "../components/Specs";
 import BottomBanner from "../components/BottomBanner";
 import ProductCard from "../components/ProductCard";
 import "../index.css";
 
-function Pro() {
+function ProM5() {
   useInactivityRedirect();
 
   const [size, setSize] = useState("14");
@@ -49,7 +49,7 @@ function Pro() {
         leftBottom={
           <Specs model={is14 ? "macbook-pro-14" : "macbook-pro-16"} />
         }
-        right={is14 ? <ChipComparison14 /> : <ChipComparison16 />}
+        right={is14 ? <ChipComparisonProM514 /> : <ChipComparisonProM516 />}
       />
 
       <BottomBanner productType="pro" />
@@ -57,4 +57,4 @@ function Pro() {
   );
 }
 
-export default Pro;
+export default ProM5;

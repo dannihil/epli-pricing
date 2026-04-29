@@ -30,8 +30,7 @@ function BottomBanner({ productType }) {
         style={{ cursor: "pointer" }}
       >
         <p style={{ color: "white" }}>
-          TILBOÐ - Komdu með gömlu tölvuna þína og fáðu aukalega 15.000kr upp í
-          nýja tölvu hjá Epli.
+          ♻️ Uppítaka - Við tökum gömlu tækin þín upp í ný!
         </p>
         {/*<p style={{ color: "white" }}>Smelltu hér fyrir verðdæmi</p>*/}
         <img

@@ -15,25 +15,43 @@ function AirPage() {
           background: "linear-gradient(180deg, #ffffff 0%, #bbe2f0  100%)",
         }}
       >
-        <img
-          className="header-img fade-in"
-          src="/assets/air.png"
-          alt="MacBook Air"
-        />
-
-        <div className="overlay-content">
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexDirection: "column",
+            textAlign: "center",
+          }}
+        >
           <h1
-            className="video-overlay"
-            style={{ fontSize: "70px", fontWeight: "700" }}
+            style={{ fontSize: "70px", fontWeight: "700", marginTop: "40px" }}
           >
             MacBook Air
           </h1>
-          <button
-            className="video-button"
-            onClick={() => navigate("/macbook-air")}
+          <div
+            style={{ display: "flex", justifyContent: "center", gap: "20px" }}
           >
-            Verðlisti
-          </button>
+            <button
+              style={{}}
+              className="video-button-air"
+              onClick={() => navigate("/macbook-air-m4")}
+            >
+              Verðlisti M4
+            </button>
+
+            <button
+              className="video-button-air"
+              onClick={() => navigate("/macbook-air-m5")}
+            >
+              Verðlisti M5
+            </button>
+          </div>
+          <img
+            className="header-img-air fade-in"
+            src="/assets/air.png"
+            alt="MacBook Air"
+          />
         </div>
       </div>
       <div
@@ -69,23 +87,23 @@ function AirPage() {
         <h3 style={{ color: "#666565" }}>
           Ótrúlega létt og aðeins 11,3 millimetra þykk og því fullkomin fyrir
           fólk á ferðinni — og svo hún passar auðveldlega í töskuna þína!
-          MacBook Air M4 er framleidd úr yfir 50 prósent endurunnu efni og hefur
+          MacBook Air M5 er framleidd úr yfir 50 prósent endurunnu efni og hefur
           endingargott ytra byrði.
         </h3>
       </div>
       <div>
         <FeatureSection
-          title="Fáanleg í 13” og 15” skjástærðum"
-          text="Apple M4 flögurnar gera MacBook Air allt að 23x hraðari en síðasta kynslóð MacBook Air með Intel-örgjörva, og allt að 2x hraðari en fyrsta kynslóð M1. Nýir orkumagrir örgjörvar sérhæfðir í að tryggja ein bestu afköstin í gervigreind sem fyrirfinnst í fartölvum. MacBook Air eru glæsilega þunnar og ótrúlega léttar fartölvur sem endast í allt að 18 klukkutíma á einni hleðslu, bjóða upp á bjarta litastillta skjái, tvöfalt hraðara þráðlaust net með WiFi 6e og geta nú tengst við tvo skjái. Ytra byrði er smíðað úr tveimur heilum álstykkjum sem gera tölvurnar harðgerðar og höggþolnar."
+          title="Sköpuð fyrir líf á ferðinni."
+          text="MacBook Air er ótrúlega létt, vegur aðeins 1,23 kg og er rúmlega sentimetri á þykkt. Hún er hönnuð til að passa í töskuna þína svo þú getir alltaf tekið hana með þér. Auk þess er hún framleidd úr yfir 50% endurunnu efni og er með harðgerða álumgjörð sem þolir daglega notkun."
           image={"/assets/air2.png"}
           bgColor="#ffffff"
           titleColor="#2a2a2a"
         />
 
         <FeatureSection
-          title="M4. Ofur hröð. Ofur kröftug."
-          text="Apple hefur pakkað örgjörvanum, skjákortinu, vinnsluminni og fleiru saman í eina flögu, svo öll forritin þín — allt frá Microsoft 365 Copilot upp í Adobe Creative Cloud — Meiri hraði en nota minna afl."
-          image={"/assets/m4.png"}
+          title="M5. Ofur hröð. Megaskilvirk."
+          text="M5-flagan er ekki bara uppfærsla. Hún breytir öllu og skilar ótrúlegum afköstum fyrir stór verkefni. Búðu þig undir flugtak."
+          image={"/assets/m5_chip.png"}
           reverse={true}
           bgColor="linear-gradient(180deg, #ffffff, #bbe2f0)"
           titleColor="linear-gradient(90deg, #022640, #5786AB)"

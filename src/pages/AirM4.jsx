@@ -4,7 +4,7 @@ import "../index.css";
 import ProductCard from "../components/ProductCard";
 import BackButton from "../components/BackButton";
 
-function AirTest() {
+function AirM4() {
   useInactivityRedirect();
 
   const [size, setSize] = useState("13");
@@ -26,10 +26,10 @@ function AirTest() {
           </div>
         </div>
 
-        <div className="neo-order-tag">
+        {/*<div className="neo-order-tag">
           <h2>Fermingartilboð</h2>
           <p>Gildir til 9 apríl</p>
-        </div>
+        </div>*/}
       </div>
 
       <div
@@ -65,13 +65,7 @@ function AirTest() {
                 <div className="neo-price-option">
                   <h2>256GB SSD</h2>
                   <p className="neo-ram">16GB RAM</p>
-                  <p
-                    className="neo-price"
-                    style={{ textDecoration: "line-through" }}
-                  >
-                    189.990 kr
-                  </p>
-                  <p className="neo-offer-price">179.990 kr</p>
+                  <p className="neo-price">179.990 kr</p>
                 </div>
               </div>
             </div>
@@ -88,9 +82,9 @@ function AirTest() {
                     className="neo-price"
                     style={{ textDecoration: "line-through" }}
                   >
-                    229.990 kr
+                    219.990 kr
                   </p>
-                  <p className="neo-offer-price">219.990 kr</p>
+                  <p className="neo-offer-price">199.990 kr</p>
                 </div>
                 <div className="neo-inner-divider" />
                 <div className="neo-price-option">
@@ -100,9 +94,9 @@ function AirTest() {
                     className="neo-price"
                     style={{ textDecoration: "line-through" }}
                   >
-                    269.990 kr
+                    259.990 kr
                   </p>
-                  <p className="neo-offer-price">259.990 kr</p>
+                  <p className="neo-offer-price">229.990 kr</p>
                 </div>
               </div>
             </div>
@@ -121,9 +115,9 @@ function AirTest() {
                     className="neo-price"
                     style={{ textDecoration: "line-through" }}
                   >
-                    229.990 kr
+                    219.990 kr
                   </p>
-                  <p className="neo-offer-price">219.990 kr</p>
+                  <p className="neo-offer-price">199.990 kr</p>
                 </div>
                 <div className="neo-inner-divider" />
                 <div className="neo-price-option">
@@ -133,9 +127,9 @@ function AirTest() {
                     className="neo-price"
                     style={{ textDecoration: "line-through" }}
                   >
-                    269.990 kr
+                    259.990 kr
                   </p>
-                  <p className="neo-offer-price">259.990 kr</p>
+                  <p className="neo-offer-price">229.990 kr</p>
                 </div>
                 <div className="neo-inner-divider" />
                 <div className="neo-price-option">
@@ -145,9 +139,9 @@ function AirTest() {
                     className="neo-price"
                     style={{ textDecoration: "line-through" }}
                   >
-                    309.990 kr
+                    299.990 kr
                   </p>
-                  <p className="neo-offer-price">299.990 kr</p>
+                  <p className="neo-offer-price">259.990 kr</p>
                 </div>
               </div>
             </div>
@@ -156,8 +150,7 @@ function AirTest() {
       </div>
 
       <div className="neo-trade-banner">
-        ♻️ Uppítökutilboð — Við gefum þér <strong>15.000 kr</strong> aukalega
-        fyrir gömlu tölvuna þína.
+        ♻️ Uppítaka - Við tökum gömlu tækin þín upp í ný!
       </div>
 
       <div className="neo-specs">
@@ -249,4 +242,4 @@ function AirTest() {
   );
 }
 
-export default AirTest;
+export default AirM4;

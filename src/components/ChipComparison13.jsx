@@ -15,14 +15,7 @@ function ChipComparison13() {
               {
                 storage: "256GB",
                 ram: "16GB",
-                price: "189.990 kr",
-                offerPrice: "179.990 kr",
-              },
-              {
-                storage: "512GB",
-                ram: "16GB",
-                price: "229.990 kr",
-                offerPrice: "219.990 kr",
+                price: "179.990 kr",
               },
             ],
           },
@@ -33,8 +26,14 @@ function ChipComparison13() {
             storageOptions: [
               {
                 storage: "512GB",
+                ram: "16GB",
+                price: "219.990 kr",
+                offerPrice: "199.990 kr",
+              },
+              {
+                storage: "512GB",
                 ram: "24GB",
-                price: "269.990 kr",
+                price: "259.990 kr",
                 offerPrice: "259.990 kr",
               },
             ],

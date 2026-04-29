@@ -1,64 +1,66 @@
 import ChipOption from "./ChipOption";
 import "../index.css";
 
-function ChipComparison() {
+function ChipComparisonProM516() {
   return (
     <div className="chip-grid">
       <ChipOption
-        title="M4 Pro chip"
-        layout="m4-pro-layout"
+        title="M5 Pro chip"
+        layout="m4-max-layout"
         variants={[
           {
-            id: "pro-14-20",
-            cpu: "14-core CPU",
+            id: "m5-pro-18-20",
+            cpu: "18-core CPU",
             gpu: "20-core GPU",
             storageOptions: [
               {
-                storage: "512GB",
+                storage: "1TB",
                 ram: "24GB",
-                price: "449.990 kr",
-                offerPrice: "399.990 kr",
+                price: "499.990 kr",
+              },
+              {
+                storage: "1TB",
+                ram: "48GB",
+                price: "579.990 kr",
               },
             ],
           },
         ]}
         battery="Allt að 24 tíma rafhlaða"
       />
-      {/*<ChipOption
-        title="M4 Max chip"
+      <ChipOption
+        title="M5 Max chip"
         layout="m4-max-layout"
         variants={[
           {
-            id: "max-14-32",
-            cpu: "14-core CPU",
+            id: "m5-max-18-32",
+            cpu: "18-core CPU",
             gpu: "32-core GPU",
             storageOptions: [
               {
-                storage: "1TB",
+                storage: "2TB",
                 ram: "36GB",
-                price: "679.990 kr",
-                offerPrice: "669.990 kr",
+                price: "739.990 kr",
               },
             ],
           },
           {
-            id: "max-16-40",
-            cpu: "16-core CPU",
+            id: "m5-max-18-40",
+            cpu: "18-core CPU",
             gpu: "40-core GPU",
             storageOptions: [
               {
-                storage: "1TB",
+                storage: "2TB",
                 ram: "48GB",
-                price: "769.990 kr",
-                offerPrice: "759.990 kr",
+                price: "849.990 kr",
               },
             ],
           },
         ]}
-        battery="Allt að 21 tíma rafhlaða"
-      />*/}
+        battery="Allt að 24 tíma rafhlaða"
+      />
     </div>
   );
 }
 
-export default ChipComparison;
+export default ChipComparisonProM516;
