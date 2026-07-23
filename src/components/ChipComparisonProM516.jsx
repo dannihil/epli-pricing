@@ -16,12 +16,12 @@ function ChipComparisonProM516() {
               {
                 storage: "1TB",
                 ram: "24GB",
-                price: "499.990 kr",
+                price: "559.990 kr",
               },
               {
                 storage: "1TB",
                 ram: "48GB",
-                price: "579.990 kr",
+                price: "669.990 kr",
               },
             ],
           },
@@ -40,7 +40,7 @@ function ChipComparisonProM516() {
               {
                 storage: "2TB",
                 ram: "36GB",
-                price: "739.990 kr",
+                price: "829.990 kr",
               },
             ],
           },
@@ -52,7 +52,7 @@ function ChipComparisonProM516() {
               {
                 storage: "2TB",
                 ram: "48GB",
-                price: "849.990 kr",
+                price: "969.990 kr",
               },
             ],
           },

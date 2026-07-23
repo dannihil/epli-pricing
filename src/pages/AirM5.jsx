@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import useInactivityRedirect from "../hooks/useInactivityRedirect";
+import { usePricing, formatPrice } from "../hooks/usePricing";
 import "../index.css";
 import ProductCard from "../components/ProductCard";
 import BackButton from "../components/BackButton";
@@ -7,8 +8,9 @@ import BackButton from "../components/BackButton";
 function AirM5() {
   useInactivityRedirect();
 
-  const [size, setSize] = useState("13");
-  const is13 = size === "13";
+  const [size, setSize] = useState(13);
+  const { variants, loading } = usePricing("macbook-air-m5", size);
+
   return (
     <div className="neo-screen">
       <BackButton />
@@ -19,17 +21,11 @@ function AirM5() {
             src="/assets/air.png"
             alt="MacBook"
           />
-
           <div>
             <h1>MacBook Air</h1>
             <p className="neo-chip">M5 chip</p>
           </div>
         </div>
-
-        {/*<div className="neo-order-tag">
-          <h2>Fermingartilboð</h2>
-          <p>Gildir til 9 apríl</p>
-        </div>*/}
       </div>
 
       <div
@@ -37,18 +33,16 @@ function AirM5() {
         style={{ marginBottom: "20px", marginTop: "-50px" }}
       >
         <h3 style={{ marginTop: "33px" }}>Skjástærð: </h3>
-
         <div className="segmented-control">
           <button
-            className={is13 ? "active" : ""}
-            onClick={() => setSize("13")}
+            className={size === 13 ? "active" : ""}
+            onClick={() => setSize(13)}
           >
             13"
           </button>
-
           <button
-            className={!is13 ? "active" : ""}
-            onClick={() => setSize("15")}
+            className={size === 15 ? "active" : ""}
+            onClick={() => setSize(15)}
           >
             15"
           </button>
@@ -56,72 +50,51 @@ function AirM5() {
       </div>
 
       <div className="neo-price-container">
-        {size === "13" ? (
-          <>
-            {/* ===== 13 INCH PRICES (your current code) ===== */}
-            <div className="neo-price-card">
-              <p className="neo-cpu">10-core CPU / 8-core GPU</p>
-              <div className="neo-inner-price-container">
-                <div className="neo-price-option">
-                  <h2>512GB SSD</h2>
-                  <p className="neo-ram">16GB RAM</p>
-                  <p className="neo-price">219.990 kr</p>
-                  {/*<p className="neo-offer-price">229.990 kr</p>*/}
-                </div>
-              </div>
-            </div>
-
-            <div className="neo-divider-air" />
-
-            <div className="neo-price-card">
-              <p className="neo-cpu">10-core CPU / 10-core GPU</p>
-              <div className="neo-inner-price-container">
-                <div className="neo-price-option">
-                  <h2>1TB SSD</h2>
-                  <p className="neo-ram">16GB RAM</p>
-                  <p className="neo-price">259.990 kr</p>
-                  {/*<p className="neo-offer-price">229.990 kr</p>*/}
-                </div>
-                <div className="neo-inner-divider" />
-                <div className="neo-price-option">
-                  <h2>1TB SSD</h2>
-                  <p className="neo-ram">24GB RAM</p>
-                  <p className="neo-price">299.990 kr</p>
-                  {/*<p className="neo-offer-price">229.990 kr</p>*/}
-                </div>
-              </div>
-            </div>
-          </>
+        {loading ? (
+          <p style={{ padding: "20px", color: "#888" }}>
+            Hleð gögnum, augnanblik..
+          </p>
         ) : (
-          <>
-            {/* ===== 15 INCH PRICES (CHANGE THESE VALUES) ===== */}
-
-            <div className="neo-price-card">
-              <p className="neo-cpu">10-core CPU / 10-core GPU</p>
-              <div className="neo-inner-price-container">
-                <div className="neo-price-option">
-                  <h2>512GB SSD</h2>
-                  <p className="neo-ram">16GB RAM</p>
-                  <p className="neo-price">259.990 kr</p>
-                  {/*<p className="neo-offer-price">199.990 kr</p>*/}
-                </div>
-                <div className="neo-inner-divider" />
-                <div className="neo-price-option">
-                  <h2>1TB SSD</h2>
-                  <p className="neo-ram">16GB RAM</p>
-                  <p className="neo-price">299.990 kr</p>
-                  {/*<p className="neo-offer-price">229.990 kr</p>*/}
-                </div>
-                <div className="neo-inner-divider" />
-                <div className="neo-price-option">
-                  <h2>1TB SSD</h2>
-                  <p className="neo-ram">24GB RAM</p>
-                  <p className="neo-price">339.990 kr</p>
-                  {/*<p className="neo-offer-price">259.990 kr</p>*/}
+          variants.map((variant, i) => (
+            <React.Fragment key={`${variant.cpu}/${variant.gpu}`}>
+              {i > 0 && <div className="neo-divider-air" />}
+              <div className="neo-price-card">
+                <p className="neo-cpu">
+                  {variant.cpu} / {variant.gpu}
+                </p>
+                <div className="neo-inner-price-container">
+                  {variant.options.map((opt, j) => (
+                    <React.Fragment key={opt.id}>
+                      {j > 0 && <div className="neo-inner-divider" />}
+                      <div className="neo-price-option">
+                        <h2>{opt.storage} SSD</h2>
+                        <p className="neo-ram">{opt.ram} RAM</p>
+                        {opt.offer_price ? (
+                          <>
+                            <p
+                              className="neo-price"
+                              style={{
+                                textDecoration: "line-through",
+                                color: "#999",
+                                fontSize: "1.5rem",
+                              }}
+                            >
+                              {formatPrice(opt.price)}
+                            </p>
+                            <p className="neo-offer-price">
+                              {formatPrice(opt.offer_price)}
+                            </p>
+                          </>
+                        ) : (
+                          <p className="neo-price">{formatPrice(opt.price)}</p>
+                        )}
+                      </div>
+                    </React.Fragment>
+                  ))}
                 </div>
               </div>
-            </div>
-          </>
+            </React.Fragment>
+          ))
         )}
       </div>
 
@@ -136,7 +109,6 @@ function AirM5() {
           <p>2408×1506</p>
           <p>500 nits</p>
         </div>
-
         <div className="neo-spec-box">
           <h4>Tengimöguleikar</h4>
           <p>4× Thunderbolt 5</p>
@@ -145,15 +117,7 @@ function AirM5() {
         </div>
       </div>
 
-      <h2
-        style={{
-          fontSize: "2.5rem",
-          fontWeight: "700",
-          marginTop: "-40px",
-        }}
-      >
-        Vinsælir aukahlutir
-      </h2>
+      <h2 className="neo-accessories-heading">Vinsælir aukahlutir</h2>
       <div className="neo-product-grid-prod-page">
         <ProductCard
           variants={[
@@ -181,7 +145,7 @@ function AirM5() {
               color: "#f5f5f7",
               price: "4.990",
               image: "/assets/mw5l3.png",
-            }, // white
+            },
           ]}
         />
         <ProductCard
@@ -192,14 +156,14 @@ function AirM5() {
               color: "#f5f5f7",
               price: "18.990",
               image: "/assets/mxk53.jpg",
-            }, // white
+            },
             {
               model: "MXK63ZM/A",
               name: "Magic Mouse (USB-C)",
               color: "#1d1d1f",
               price: "23.990",
               image: "/assets/mxk63.jpg",
-            }, // black
+            },
           ]}
         />
         <ProductCard
@@ -210,7 +174,7 @@ function AirM5() {
               color: "#f5f5f7",
               price: "34.990",
               image: "/assets/mxp63.png",
-            }, // white
+            },
           ]}
         />
       </div>

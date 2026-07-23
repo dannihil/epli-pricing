@@ -13,8 +13,8 @@ function ChipComparisonMacMini() {
             gpu: "10-core GPU",
             storageOptions: [
               { storage: "256GB", ram: "16GB", price: "119.990 kr" },
-              { storage: "512GB", ram: "16GB", price: "159.990 kr" },
-              { storage: "512GB", ram: "24GB", price: "189.990 kr" },
+              { storage: "512GB", ram: "16GB", price: "199.990 kr" },
+              { storage: "512GB", ram: "24GB", price: "229.990 kr" },
             ],
           },
         ]}
@@ -27,7 +27,7 @@ function ChipComparisonMacMini() {
             cpu: "10-core CPU",
             gpu: "16-core GPU",
             storageOptions: [
-              { storage: "512GB", ram: "24GB", price: "269.990 kr" },
+              { storage: "512GB", ram: "24GB", price: "309.990 kr" },
             ],
           },
         ]}

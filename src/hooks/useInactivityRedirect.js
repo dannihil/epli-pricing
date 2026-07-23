@@ -11,11 +11,7 @@ export default function useInactivityRedirect() {
     const resetTimer = () => {
       clearTimeout(timerRef.current);
       timerRef.current = setTimeout(() => {
-        if (window.history.length > 1) {
-          navigate(-1);
-        } else {
-          navigate("/");
-        }
+        window.location.reload();
       }, INACTIVITY_TIME);
     };
 

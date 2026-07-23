@@ -12,7 +12,7 @@ function ChipComparisonMacStudio() {
             cpu: "14-core CPU",
             gpu: "32-core GPU",
             storageOptions: [
-              { storage: "512GB", ram: "36GB", price: "399.990 kr" },
+              { storage: "512GB", ram: "36GB", price: "499.990 kr" },
             ],
           },
         ]}
@@ -25,7 +25,7 @@ function ChipComparisonMacStudio() {
             cpu: "28-core CPU",
             gpu: "60-core GPU",
             storageOptions: [
-              { storage: "1TB", ram: "96GB", price: "759.990 kr" },
+              { storage: "1TB", ram: "96GB", price: "999.990 kr" },
             ],
           },
         ]}

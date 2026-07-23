@@ -69,37 +69,6 @@ function AirM4() {
                 </div>
               </div>
             </div>
-
-            <div className="neo-divider-air" />
-
-            <div className="neo-price-card">
-              <p className="neo-cpu">10-core CPU / 10-core GPU</p>
-              <div className="neo-inner-price-container">
-                <div className="neo-price-option">
-                  <h2>512GB SSD</h2>
-                  <p className="neo-ram">16GB RAM</p>
-                  <p
-                    className="neo-price"
-                    style={{ textDecoration: "line-through" }}
-                  >
-                    219.990 kr
-                  </p>
-                  <p className="neo-offer-price">199.990 kr</p>
-                </div>
-                <div className="neo-inner-divider" />
-                <div className="neo-price-option">
-                  <h2>512GB SSD</h2>
-                  <p className="neo-ram">24GB RAM</p>
-                  <p
-                    className="neo-price"
-                    style={{ textDecoration: "line-through" }}
-                  >
-                    259.990 kr
-                  </p>
-                  <p className="neo-offer-price">229.990 kr</p>
-                </div>
-              </div>
-            </div>
           </>
         ) : (
           <>
